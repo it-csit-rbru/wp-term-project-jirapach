@@ -34,7 +34,7 @@
                     <p>Login Area</p>
                 </div>  
                 <div class="col-sm-12 col-md-9 col-lg-9">
-                <h4>แก้ไขข้อมูลเครื่องมือ</h4>    
+                <h4>แก้ไขข้อมูลลูกค้า</h4>    
                 <?php
                     include 'connectdb.php';
                     if(isset($_GET['submit'])){
@@ -48,7 +48,7 @@
                         mysqli_query($conn,$sql);
                         mysqli_close($conn);
                         echo "แก้ไข $customer_id เรียบร้อยแล้ว<br>";
-                        echo '<a href="customer_list.php">แสดงเครื่องมือทั้งหมด</a>';
+                        echo '<a href="customer_list.php">แสดงลูกค้าทั้งหมด</a>';
                     }else{
                         $customer_id = $_REQUEST['customer_id'];
                         $sql =  "SELECT * FROM customer where customer_id='$customer_id'";
